@@ -13,8 +13,8 @@ function BoardComponent({ board, setBoard }: BoardProps): JSX.Element {
     <div className="board">
       {board.cells.map((row, index) => (
         <React.Fragment key={index}>
-          {row.map(() => (
-            <CellComponent></CellComponent>
+          {row.map((cell) => (
+            <CellComponent cell={cell} key={cell.id}></CellComponent>
           ))}
         </React.Fragment>
       ))}
